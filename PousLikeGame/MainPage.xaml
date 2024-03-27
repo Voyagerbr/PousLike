@@ -13,7 +13,7 @@
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="40"/>
           <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="60"/>
+          <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>  
     <Image Source="background.png"
             Aspect="AspectFill"
@@ -27,16 +27,21 @@
     <Frame
       Grid.Column="2"
       Grid.Row="3"
-      CornerRadius="30"
-      Margin="10,5,10,5"
-      HeightRequest="120"
-      VerticalOptions="Center">
+      CornerRadius="20"
+      HeightRequest="250"
+      BackgroundColor="#d4a4a1">
       <Grid>
         <Grid.RowDefinitions>
           <RowDefinition Height="60"/>
           <RowDefinition Height="60"/>
           <RowDefinition Height="60"/>
         </Grid.RowDefinitions>
+        <ImageButton Source="waterbutton.png"
+                    Grid.Row="0"
+                    Aspect="AspectFill"/>
+        <ImageButton Source="energybutton.png"
+                    Grid.Row="1"
+                    WidthRequest="83"/>
       </Grid>
     </Frame>
     </Grid>

@@ -42,6 +42,7 @@
         <ImageButton Source="energybutton.png"
                     Grid.Row="1"
                     WidthRequest="83"/>
+        
       </Grid>
     </Frame>
     </Grid>

@@ -1,4 +1,4 @@
-public class MainPage
+public class Character
 	{
 	public double Hungry;
     public double Energy;

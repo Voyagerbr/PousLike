@@ -13,7 +13,7 @@
         <Grid.ColumnDefinitions>
           <ColumnDefinition Width="40"/>
           <ColumnDefinition Width="*"/>
-          <ColumnDefinition Width="70"/>
+          <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>  
     <Image Source="background.png"
             Aspect="AspectFill"
@@ -38,10 +38,16 @@
         </Grid.RowDefinitions>
         <ImageButton Source="waterbutton.png"
                     Grid.Row="0"
-                    Aspect="AspectFill"/>
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent"/>
         <ImageButton Source="energybutton.png"
                     Grid.Row="1"
-                    WidthRequest="83"/>
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent"/>
+        <ImageButton Source="foodbutton.png"
+                    Grid.Row="2"
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent"/>
         
       </Grid>
     </Frame>

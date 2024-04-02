@@ -4,6 +4,7 @@
              x:Class="PousLikeGame.MainPage"
              Shell.NavBarIsVisible="False">
     <Grid>
+
         <Grid.RowDefinitions>
           <RowDefinition Height="40"/>
           <RowDefinition Height="40"/>
@@ -15,15 +16,25 @@
           <ColumnDefinition Width="*"/>
           <ColumnDefinition Width="80"/>
         </Grid.ColumnDefinitions>  
+       
     <Image Source="background.png"
             Aspect="AspectFill"
             Grid.RowSpan="4"
             Grid.ColumnSpan="3"/>
-    <Image Source="arthur.png"
+    <Image x:Name = "CharacterImg"
             Grid.Row="3"
             Grid.Column="0"
             Grid.ColumnSpan="2"
-            VerticalOptions="End"/>
+            VerticalOptions="End"/> 
+    <Frame Grid.Column="0"
+              Grid.Row="0"
+              Grid.ColumnSpan="3"
+              Grid.RowSpan="3"
+              CornerRadius="20"
+              BackgroundColor="#d4a4a1"
+              Margin="10">
+            <Label Text="Teste"/>
+        </Frame>
     <Frame
       Grid.Column="2"
       Grid.Row="3"
@@ -32,9 +43,10 @@
       BackgroundColor="#d4a4a1">
       <Grid>
         <Grid.RowDefinitions>
-          <RowDefinition Height="60"/>
-          <RowDefinition Height="60"/>
-          <RowDefinition Height="60"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
+          <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <ImageButton Source="waterbutton.png"
                     Grid.Row="0"
@@ -48,6 +60,11 @@
                     Grid.Row="2"
                     Aspect="AspectFill"
                     BackgroundColor="Transparent"/>
+        <ImageButton Source="arrowbutton.png"
+                    Grid.Row="3"
+                    Aspect="AspectFill"
+                    BackgroundColor="Transparent"/>
+
         
       </Grid>
     </Frame>

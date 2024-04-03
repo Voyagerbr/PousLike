@@ -58,7 +58,7 @@
             HeightRequest="60"
             Grid.Column="0"
             VerticalOptions="Center"/>
-
+<!-- -->
     <Image Source="foodbutton.png"
             Grid.Row="2"
             HeightRequest="60"

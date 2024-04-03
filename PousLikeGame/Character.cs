@@ -1,8 +1,11 @@
+
 public class Character
-	{
-	public double Hungry;
-    public double Energy;
-    public double Thirst;
-    public string? Name;
-	
-	}
+{
+	protected string Fotinha;
+
+    public string GetPhoto()
+    {
+        return Fotinha;
+    }
+
+}

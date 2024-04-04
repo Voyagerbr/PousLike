@@ -2,6 +2,6 @@ public class Arthur:Character
 {
     public Arthur()
     {
-        Fotinha  = "Arthur.png";
+        Fotinha  = "arthur.png";
     }
 }

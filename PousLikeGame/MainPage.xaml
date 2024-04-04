@@ -39,9 +39,9 @@
               
       <Grid>
           <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
+            <RowDefinition Height="40"/>
           </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="60"/>
@@ -50,18 +50,18 @@
     <Image Source="waterbutton.png"
             Grid.Column="0"
             Grid.Row="0"
-            HeightRequest="60"
+            HeightRequest="40"
             VerticalOptions="Center"/> 
 
     <Image Source="energybutton.png"
             Grid.Row="1"
-            HeightRequest="60"
+            HeightRequest="40"
             Grid.Column="0"
             VerticalOptions="Center"/>
 <!-- -->
     <Image Source="foodbutton.png"
             Grid.Row="2"
-            HeightRequest="60"
+            HeightRequest="40"
             Grid.Column="0"
             VerticalOptions="Center"/>
             
@@ -73,7 +73,7 @@
                  VerticalOptions="Center"/>
     <ProgressBar ProgressColor="#50f7fa"
                  Progress="0.1"
-                 Grid.Row="0"
+                 Grid.Row="1"
                  Grid.Column="2"
                  Grid.RowSpan="2"
                  VerticalOptions="Center"/>
@@ -84,7 +84,7 @@
                  Grid.RowSpan="2"
                  VerticalOptions="Center"/>
       </Grid>
-        </Frame>
+    </Frame>
     <!--==============================================================================Fim do Frame das Progress Bar======================================================================================-->
 
 
@@ -104,19 +104,26 @@
         </Grid.RowDefinitions>
         <ImageButton Source="waterbutton.png"
                     Grid.Row="0"
-                    Aspect="AspectFill"
+                     HeightRequest="50"
+                    WidthRequest="50"
                     BackgroundColor="Transparent"/>
         <ImageButton Source="energybutton.png"
                     Grid.Row="1"
-                    Aspect="AspectFill"
+                     HeightRequest="50"
+                    WidthRequest="50"
                     BackgroundColor="Transparent"/>
         <ImageButton Source="foodbutton.png"
                     Grid.Row="2"
+                   HeightRequest="50"
+                    WidthRequest="50"
                     Aspect="AspectFill"
                     BackgroundColor="Transparent"/>
         <ImageButton Source="arrowbutton.png"
                     Grid.Row="3"
-                    Aspect="AspectFill"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    Clicked="ArrowButtonIsClicked"
+
                     BackgroundColor="Transparent"/>
 
         

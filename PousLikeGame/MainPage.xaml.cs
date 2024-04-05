@@ -53,6 +53,13 @@ void TimePassed()
 		thui.SetThisrt(thui.GetThisrst() - 0.01);
 		thui.SetEnergy(thui.GetEnergy() - 0.01);
 
+		pensador.SetHungry(pensador.GetHungry() - 0.01);
+		pensador.SetThisrt(pensador.GetThisrst() - 0.01);
+		pensador.SetEnergy(pensador.GetEnergy() - 0.01);
+
+		dogus.SetHungry(dogus.GetHungry() - 0.01);
+		dogus.SetThisrt(dogus.GetThisrst() - 0.01);
+		dogus.SetEnergy(dogus.GetEnergy() - 0.01);
 		
 	}
 

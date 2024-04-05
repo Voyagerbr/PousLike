@@ -22,7 +22,13 @@
             Grid.RowSpan="4"
             Grid.ColumnSpan="3"/>
     <Label x:Name="CharacterName"
-          FontFamily="Anta"/>
+          FontFamily="Anta"
+          Grid.Row="3"
+          Grid.Column="0"
+          Grid.ColumnSpan="2"
+          FontSize="50"
+          VerticalOptions="Start"
+          HorizontalTextAlignment="Center"/>
     <Image x:Name = "CharacterImg"
             Grid.Row="3"
             Grid.Column="0"

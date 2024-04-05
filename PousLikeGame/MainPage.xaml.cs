@@ -13,6 +13,12 @@ public partial class MainPage : ContentPage
 	public MainPage()
 	{
 		InitializeComponent();
+//=====================================================================
+		var timer = Application.Current.Dispatcher.CreateTimer();
+		timer.Interval = TimeSpan.FromSeconds(10);
+		timer.Tick += (s, e) => TimePassed();
+		timer.Start();
+//=====================================================================
 
 		thui = new Arthur();
 
@@ -20,11 +26,37 @@ public partial class MainPage : ContentPage
 
 		pensador = new Squirtle();
 
-		
+//======================================================================
 		Atual = thui;
+		Atual.SetHungry(0.2);
+		Atual.SetThisrt(0.2);
+		Atual.SetEnergy(0.2);
+//======================================================================
+
 		CharacterImg.Source = Atual.GetPhoto();
 
+		CharacterName.Text = Atual.GetName();
+//======================================================================	
+}	
+void TimePassed()
+	{
+		Atual.SetHungry(Atual.GetHungry() - 0.01);
+		HungryBar.Progress = Atual.GetHungry();
+
+		Atual.SetThisrt(Atual.GetThisrst() - 0.0001);
+		ThisrstBar.Progress = Atual.GetThisrst();
+
+		Atual.SetEnergy(Atual.GetEnergy() - 0.001);
+		EnergyBar.Progress = Atual.GetEnergy();
+
+		thui.SetHungry(thui.GetHungry() - 0.01);
+		thui.SetThisrt(thui.GetThisrst() - 0.01);
+		thui.SetEnergy(thui.GetEnergy() - 0.01);
+
+		
 	}
+
+	
 	void ArrowButtonIsClicked(object sender,EventArgs args) 
 	{
 		
@@ -40,6 +72,7 @@ public partial class MainPage : ContentPage
 		
 		CharacterImg.Source = Atual.GetPhoto();
 	}
+	
 	
 }
 

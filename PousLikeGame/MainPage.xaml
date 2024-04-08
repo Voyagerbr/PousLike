@@ -22,13 +22,15 @@
             Grid.RowSpan="4"
             Grid.ColumnSpan="3"/>
     <Label x:Name="CharacterName"
+          HeightRequest="120"
           FontFamily="Anta"
           Grid.Row="3"
           Grid.Column="0"
           Grid.ColumnSpan="2"
           FontSize="50"
           VerticalOptions="Start"
-          HorizontalTextAlignment="Center"/>
+          HorizontalTextAlignment="Center"
+          HorizontalOptions="Center"/>
     <Image x:Name = "CharacterImg"
             Grid.Row="3"
             Grid.Column="0"
@@ -45,9 +47,9 @@
               
       <Grid>
           <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="40"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
           </Grid.RowDefinitions>
           <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="60"/>
@@ -113,16 +115,19 @@
         </Grid.RowDefinitions>
         <ImageButton Source="waterbutton.png"
                     Grid.Row="0"
+                    Clicked="WaterButtonIsClicked"
                      HeightRequest="50"
                     WidthRequest="50"
                     BackgroundColor="Transparent"/>
         <ImageButton Source="energybutton.png"
                     Grid.Row="1"
+                    Clicked="EnergyButtonIsClicked"
                      HeightRequest="50"
                     WidthRequest="50"
                     BackgroundColor="Transparent"/>
         <ImageButton Source="foodbutton.png"
                     Grid.Row="2"
+                    Clicked="FoodButtonIsClicked"
                    HeightRequest="50"
                     WidthRequest="50"
                     Aspect="AspectFill"

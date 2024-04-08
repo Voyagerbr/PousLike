@@ -35,7 +35,7 @@ public partial class MainPage : ContentPage
 
 		CharacterImg.Source = Atual.GetPhoto();
 
-		CharacterName.Text = Atual.GetName();
+		CharacterName.Text = Atual.GetNames();
 //======================================================================	
 }	
 void TimePassed()
@@ -78,8 +78,24 @@ void TimePassed()
 		Atual = thui;		
 		
 		CharacterImg.Source = Atual.GetPhoto();
+		CharacterName.Text = Atual.GetNames();
+
 	}
 	
-	
+	private void EnergyButtonIsClicked(object sender, EventArgs args) 
+	{
+		Atual.SetEnergy(Atual.GetEnergy() + 0.1);
+		EnergyBar.Progress = Atual.GetEnergy();
+	}
+	private void FoodButtonIsClicked(object sender, EventArgs args) 
+	{
+		Atual.SetHungry(Atual.GetHungry() + 0.1);
+		HungryBar.Progress = Atual.GetHungry();
+	}
+	private void WaterButtonIsClicked(object sender, EventArgs args) 
+	{
+		Atual.SetThisrt(Atual.GetThisrst() + 0.1);
+		ThisrstBar.Progress = Atual.GetThisrst();
+	}
 }
 

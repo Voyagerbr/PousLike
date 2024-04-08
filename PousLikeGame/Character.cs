@@ -5,7 +5,7 @@ public class Character
     protected double Thisrst; //Sede do Personagem
     protected double Hungry; //Fome do Personagem
     protected double Energy; //Energia do Personagem
-    protected string Name; // Nome do Personagem
+    protected string Names; // Nome do Personagem
     
     public Character()
     {
@@ -17,9 +17,9 @@ public class Character
     {
         return Fotinha;
     }
-    public string GetName() //Para pegar o nome do Personagem
+    public string GetNames() //Para pegar o nome do Personagem
     {
-        return Name;
+        return Names;
     }
 //===========================================================================================================
     public double GetThisrst() //Para pegar a sede do Personagem

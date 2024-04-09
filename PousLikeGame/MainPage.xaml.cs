@@ -15,7 +15,7 @@ public partial class MainPage : ContentPage
 		InitializeComponent();
 //=====================================================================
 		var timer = Application.Current.Dispatcher.CreateTimer();
-		timer.Interval = TimeSpan.FromSeconds(10);
+		timer.Interval = TimeSpan.FromSeconds(3);
 		timer.Tick += (s, e) => TimePassed();
 		timer.Start();
 //=====================================================================
@@ -28,9 +28,7 @@ public partial class MainPage : ContentPage
 
 //======================================================================
 		Atual = thui;
-		Atual.SetHungry(0.2);
-		Atual.SetThisrt(0.2);
-		Atual.SetEnergy(0.2);
+
 //======================================================================
 
 		CharacterImg.Source = Atual.GetPhoto();
@@ -43,23 +41,23 @@ void TimePassed()
 		Atual.SetHungry(Atual.GetHungry() - 0.01);
 		HungryBar.Progress = Atual.GetHungry();
 
-		Atual.SetThisrt(Atual.GetThisrst() - 0.0001);
+		Atual.SetThisrt(Atual.GetThisrst() - 0.01);
 		ThisrstBar.Progress = Atual.GetThisrst();
 
-		Atual.SetEnergy(Atual.GetEnergy() - 0.001);
+		Atual.SetEnergy(Atual.GetEnergy() - 0.01);
 		EnergyBar.Progress = Atual.GetEnergy();
 
-		thui.SetHungry(thui.GetHungry() - 0.01);
-		thui.SetThisrt(thui.GetThisrst() - 0.01);
-		thui.SetEnergy(thui.GetEnergy() - 0.01);
+		thui.SetHungry(thui.GetHungry() - 0.03);
+		thui.SetThisrt(thui.GetThisrst() - 0.04);
+		thui.SetEnergy(thui.GetEnergy() - 0.02);
 
-		pensador.SetHungry(pensador.GetHungry() - 0.01);
-		pensador.SetThisrt(pensador.GetThisrst() - 0.01);
-		pensador.SetEnergy(pensador.GetEnergy() - 0.01);
+		pensador.SetHungry(pensador.GetHungry() - 0.03);
+		pensador.SetThisrt(pensador.GetThisrst() - 0.04);
+		pensador.SetEnergy(pensador.GetEnergy() - 0.02);
 
-		dogus.SetHungry(dogus.GetHungry() - 0.01);
-		dogus.SetThisrt(dogus.GetThisrst() - 0.01);
-		dogus.SetEnergy(dogus.GetEnergy() - 0.01);
+		dogus.SetHungry(dogus.GetHungry() - 0.03);
+		dogus.SetThisrt(dogus.GetThisrst() - 0.04);
+		dogus.SetEnergy(dogus.GetEnergy() - 0.02);
 		
 	}
 
@@ -84,17 +82,17 @@ void TimePassed()
 	
 	private void EnergyButtonIsClicked(object sender, EventArgs args) 
 	{
-		Atual.SetEnergy(Atual.GetEnergy() + 0.1);
+		Atual.SetEnergy(Atual.GetEnergy() + 0.07);
 		EnergyBar.Progress = Atual.GetEnergy();
 	}
 	private void FoodButtonIsClicked(object sender, EventArgs args) 
 	{
-		Atual.SetHungry(Atual.GetHungry() + 0.1);
+		Atual.SetHungry(Atual.GetHungry() + 0.07);
 		HungryBar.Progress = Atual.GetHungry();
 	}
 	private void WaterButtonIsClicked(object sender, EventArgs args) 
 	{
-		Atual.SetThisrt(Atual.GetThisrst() + 0.1);
+		Atual.SetThisrt(Atual.GetThisrst() + 0.07);
 		ThisrstBar.Progress = Atual.GetThisrst();
 	}
 }

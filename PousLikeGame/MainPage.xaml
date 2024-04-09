@@ -26,7 +26,7 @@
           FontFamily="Anta"
           Grid.Row="3"
           Grid.Column="0"
-          Grid.ColumnSpan="2"
+          Grid.ColumnSpan="3"
           FontSize="50"
           VerticalOptions="Start"
           HorizontalTextAlignment="Center"
@@ -43,7 +43,7 @@
               Grid.RowSpan="3"
               CornerRadius="20"
               BackgroundColor="#d4a4a1"
-              Margin="10">
+              Margin="5">
               
       <Grid>
           <Grid.RowDefinitions>
@@ -55,45 +55,46 @@
                 <ColumnDefinition Width="60"/>
                 <ColumnDefinition Width="*"/>
           </Grid.ColumnDefinitions>
+      
     <Image Source="waterbutton.png"
             Grid.Column="0"
             Grid.Row="0"
-            HeightRequest="40"
-            VerticalOptions="Center"/> 
+            HeightRequest="60"/> 
 
     <Image Source="energybutton.png"
             Grid.Row="1"
-            HeightRequest="40"
-            Grid.Column="0"
-            VerticalOptions="Center"/>
-<!-- -->
+            HeightRequest="60"
+            Grid.Column="0"/>
+
     <Image Source="foodbutton.png"
             Grid.Row="2"
-            HeightRequest="40"
-            Grid.Column="0"
-            VerticalOptions="Center"/>
+            HeightRequest="60"
+            Grid.Column="0"/>
             
     <ProgressBar x:Name="ThisrstBar"
                 ProgressColor="#50f7fa"
+                VerticalOptions="Start"
                  Progress="0.2"
                  Grid.Row="0"
                  Grid.Column="1"
                  Grid.RowSpan="2"
-                 VerticalOptions="Center"/>
+                 HeightRequest="60"/>
     <ProgressBar x:Name="EnergyBar"
+                VerticalOptions="Start"
                 ProgressColor="#50f7fa"
                  Progress="0.2"
                  Grid.Row="1"
                  Grid.Column="2"
-                 Grid.RowSpan="2"
-                 VerticalOptions="Center"/>
+                 HeightRequest="60"
+                 Grid.RowSpan="2"/>
     <ProgressBar x:Name="HungryBar"
+                VerticalOptions="Start"
                 ProgressColor="#50f7fa"
                  Progress="0.2"
                  Grid.Row="3"
                  Grid.Column="1"
-                 Grid.RowSpan="2"
-                 VerticalOptions="Center"/>
+                 HeightRequest="60"
+                 Grid.RowSpan="2"/>
       </Grid>
     </Frame>
     <!--==============================================================================Fim do Frame das Progress Bar======================================================================================-->
@@ -137,7 +138,6 @@
                     HeightRequest="60"
                     WidthRequest="60"
                     Clicked="ArrowButtonIsClicked"
-
                     BackgroundColor="Transparent"/>
 
         

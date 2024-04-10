@@ -77,6 +77,33 @@ void TimePassed()
 		
 		CharacterImg.Source = Atual.GetPhoto();
 		CharacterName.Text = Atual.GetNames();
+		
+		HungryBar.Progress = Atual.GetHungry();
+		ThisrstBar.Progress = Atual.GetThisrst();
+		EnergyBar.Progress = Atual.GetEnergy();
+
+
+	}
+	void LeftArrowButtonIsClicked(object sender,EventArgs args) 
+	{
+		
+
+		if (Atual == thui)
+		 Atual = pensador;
+		
+		else if (Atual == pensador)
+		Atual = dogus;
+		
+		else if(Atual == dogus)
+		Atual = thui;		
+		
+		CharacterImg.Source = Atual.GetPhoto();
+		CharacterName.Text = Atual.GetNames();
+		
+		HungryBar.Progress = Atual.GetHungry();
+		ThisrstBar.Progress = Atual.GetThisrst();
+		EnergyBar.Progress = Atual.GetEnergy();
+
 
 	}
 	

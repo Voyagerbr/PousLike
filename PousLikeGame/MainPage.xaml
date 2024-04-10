@@ -105,10 +105,11 @@
       Grid.Column="2"
       Grid.Row="3"
       CornerRadius="20"
-      HeightRequest="250"
+      HeightRequest="300"
       BackgroundColor="#d4a4a1">
       <Grid>
         <Grid.RowDefinitions>
+          <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
           <RowDefinition Height="*"/>
@@ -139,7 +140,12 @@
                     WidthRequest="60"
                     Clicked="ArrowButtonIsClicked"
                     BackgroundColor="Transparent"/>
-
+        <ImageButton Source="leftarrowbutton.png"
+                    Grid.Row="4"
+                    HeightRequest="60"
+                    WidthRequest="60"
+                    Clicked="LeftArrowButtonIsClicked"
+                    BackgroundColor="Transparent"/>
         
       </Grid>
     </Frame>
